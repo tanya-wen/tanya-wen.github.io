@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Ask Tanya anything — chatbot about her background and experience" />
+    <meta name="author" content="Tanya Wen" />
+    <title>Ask Me Anything · Tanya Wen, Ph.D.</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon_io/android-chrome-512x512.png" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://kit.fontawesome.com/0c8f9d8867.js" crossorigin="anonymous"></script>
+    <!-- Academicons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html"><i class="fas fa-home"></i> Tanya Wen, Ph.D.</a>
+            <button class="navbar-toggler font-weight-bold bg-primary text-white rounded" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                Menu <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="industry.html">Industry</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="projects.html">Projects</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="academia.html">Academia</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="publications.html">Publications</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="miscellaneous.html">Misc</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded active" href="chat.html">Chat</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead bg-primary text-white text-center">
+        <div class="container">
+            <h1 class="masthead-heading mb-3">Ask Me Anything</h1>
+            <p class="masthead-subheading font-weight-light">A chatbot with info about my background, research, and experience</p>
+        </div>
+    </header>
+
+    <!-- Chat Section -->
+    <section class="page-section bg-light" id="chat">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 col-md-10">
+                    <div class="chat-container">
+                        <div class="chat-messages" id="chatMessages"></div>
+                        <div class="chat-suggestions" id="chatSuggestions">
+                            <button class="chat-chip" onclick="askChip(this)">What did you do as a Data Scientist?</button>
+                            <button class="chat-chip" onclick="askChip(this)">What did you do at Reality Labs?</button>
+                            <button class="chat-chip" onclick="askChip(this)">What are your skills?</button>
+                            <button class="chat-chip" onclick="askChip(this)">How can I contact you?</button>
+                        </div>
+                        <div class="chat-input-row">
+                            <input type="text" id="chatInput" placeholder="Ask me anything…" autocomplete="off" />
+                            <button id="chatSend" onclick="handleSend()"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0"></div>
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Connect with me</h4>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://scholar.google.com/citations?user=pegh2ooAAAAJ&hl=en" target="_blank">
+                        <i style="font-size: 1.25em" class="ai ai-google-scholar"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/tanya-wen-phd/" target="_blank">
+                        <i style="font-size: 1.25em" class="fab fa-linkedin"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/tanya-wen" target="_blank">
+                        <i style="font-size: 1.25em" class="fab fa-github"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="mailto:2tanyawen@gmail.com">
+                        <i style="font-size: 1.25em" class="fas fa-envelope"></i></a>
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
+        </div>
+    </footer>
+    <!-- Copyright Section-->
+    <div class="copyright py-4 text-center text-white">
+        <div class="container"><small>Last updated - June 2026</small></div>
+    </div>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="../js/scripts.js"></script>
+
+    <!-- Chatbot -->
+    <script>
+    const RESPONSES = {
+        intro: "Hi! I'm Tanya — a research scientist with a PhD in cognitive neuroscience from Cambridge. My career spans <strong>data science</strong> on the Media Foundation team within Meta's Family of Apps, <strong>applied perception research</strong> on VR/AR hardware at Meta Reality Labs, and <strong>neuroscience research</strong> at the Naval Health Research Center and Duke University.<br><br>I am interested in answering questions about user experience and product PREQ through experimentation, data, and statistical analysis, and turning them into actionable insights. I have experience using a variety of tools, including behavioral measures, questionnaires, electrophysiological recordings, eye-tracking, and virtual reality. I am eager to apply my knowledge to real world settings.<br><br>What would you like to know?",
+
+        meta_foa: "I was a Data Scientist within Meta's Family of Apps on the Media Foundation team. I ran analytics and A/B tests on various media (video, image, and audio, etc) across Facebook, Instagram, Messenger, and Threads — covering reliability, render quality, latency, and user experience.<br><br>Some highlights: I benchmarked internal and external messaging apps across 6 media types to identify opportunities, analyzed video prefetching infrastructure by reviewing 50+ historical experiments and running 10+ A/B tests, performed holiday traffic forecasting to prepare for surges, and developed 8 analytics agent recipes that accelerated regression debugging and metrics reporting.",
+
+        reality_labs: "At Meta Reality Labs Research (Mar 2024–Aug 2025), I was an Applied Perception Scientist on the Audio Team. I led experiments A/B testing audio personalization on the Quest 3 headset across 5 studies — this resulted in two published preprints and open-source contributions. I also co-led onsite speech intelligibility studies for Meta Ray-Ban glasses, which contributed to the Conversation Focus feature announced at Connect 2025. On the infrastructure side, I built a Prolific + Qualtrics + Amazon S3 data collection system that made the team 30× more efficient and cut collection costs by ~80%.",
+
+        rl_research: "At Meta Reality Labs, I was an Applied Perception Scientist running human-subjects research on audio perception for VR/AR products. My work spanned two product lines: the Quest 3 VR headset and Meta Ray-Ban smart glasses.<br><br>For Quest 3, I designed and ran studies on spatial audio. This resulted in two published preprints and open-source code contributions.<br><br>For Ray-Ban glasses, I co-led onsite speech intelligibility studies measuring how well users could understand speech in real environments, feeding into the Conversation Focus feature. Earlier, at the Naval Health Research Center, I used EEG and VR to study health and cognitive performance in service members.",
+
+        nhrc: "At the Naval Health Research Center (Oct 2022–Mar 2024), I was a Research Scientist studying traumatic brain injury (TBI). I led EEG analysis on 50+ TBI patients and healthy controls, which included building the preprocessing pipeline, and conducted the ERP analysis for task-based recordings, and k-means clustering on resting state data to identify biomarkers. I also designed and programmed four VR tasks in Unity/C# with hardware integration (IMU, light/sound sensors, Tobii eye-tracking glasses for multi-device sync), and developed custom analysis pipelines for multi-modal data collected in VR.",
+
+        academia: "I did my PhD at the MRC Cognition and Brain Sciences Unit, University of Cambridge (2015–2019), supervised by Dr. John Duncan and Dr. Daniel Mitchell. My research focused on visual attention and the multiple-demand network — frontal and parietal brain regions involved in flexible, goal-directed behavior. I then did a postdoc at Duke University (2019–2022) with Dr. Tobias Egner, studying event cognition, temporal memory, and cognitive flexibility using behavioral experiments, fMRI, and hierarchical Bayesian reinforcement learning models. I have 15 publications and preprints across journals including Journal of Neuroscience, Cerebral Cortex, and Psychological Science. You can browse and download them <a href=\"publications.html\" target=\"_blank\" style=\"color:#2e6fa8\">here</a>.",
+
+        publications: "My most recent work (2025) is on spatial audio perception in VR — how sound source history warps perceived location, individual differences in learning to localize audio, and a study on cognitive flexibility strategies. My earlier academic work covers visual attention (MEG/EEG decoding), event cognition and memory (fMRI), and reinforcement learning models of cognitive flexibility. You can browse and download them all <a href=\"publications.html\" target=\"_blank\" style=\"color:#2e6fa8\">here</a>, or find me on <a href=\"https://scholar.google.com/citations?user=pegh2ooAAAAJ&hl=en\" target=\"_blank\" style=\"color:#2e6fa8\">Google Scholar</a>.",
+
+        skills_programming: "My main languages are Python (numpy, pandas, scikit-learn, matplotlib, seaborn, OpenCV) and SQL (Hive, Presto) for data science work. I have 11+ years of MATLAB experience for neuroscience research and analysis. I also use JavaScript (built 30+ online psychology experiments), Unity/C# (built 4 VR tasks at NHRC), and have experience with Git, data pipelines, and SLURM on compute clusters.",
+
+        skills_quant: "On the quantitative side: A/B testing, regression, ANOVA, linear mixed effects models, supervised learning (logistic regression, random forest, GBDT, SVM), causal inference (DiD, propensity score matching, instrumental variables), forecasting, and opportunity sizing. I'm comfortable with various types of datasets, and have applied these across neuroimaging data, human-subject experiments, and large-scale production analytics.",
+
+        ux_research: "I have extensive user research experience — from in-person lab studies with fMRI and EEG, to large-scale online studies on MTurk and Prolific, to onsite VR/AR user studies with hardware. My methods include experimental design, psychophysics, eye-tracking, qualitative thematic analysis, surveys, sentiment analysis, user interviews, and IRB applications. At Meta Reality Labs I led end-to-end studies from research planning through data collection, analysis, and stakeholder presentations.",
+
+        contact: "You can reach me at 2tanyawen@gmail.com, or connect on LinkedIn at linkedin.com/in/tanya-wen-phd. I'm always happy to chat about research, data science, or potential collaborations!",
+
+        misc: "Outside of work, I love spending time with my dog Pavlov — he holds the AKC Elite Performer Trick Dog Title with 50+ tricks including skateboarding and painting! As a psychologist I've also run classic experiments with him: object permanence, theory of mind, Piaget's conservation task, and more. I love board games, they have the components of socializing with friends, cognitive strategy, and fun all bundled together! I also enjoy cooking and baking. Check out the Misc page for videos and photos!",
+
+        default: "I don't have a great answer for that one! Try asking about my work at Meta, my academic research, my technical skills, or how to get in touch. You can also explore this website to read about my experiences."
+    };
+
+    const SUB_RESPONSES = {
+        meta_foa: [
+            {
+                pattern: /benchmark/,
+                response: "The benchmarking was a multi-part analysis comparing internal and external messaging platforms. I covered 6 media types — video, images, audio, stickers, GIFs, and rich link previews to understand where Meta's messaging platforms stood and identify the highest value opportunities for the roadmap. I worked on:<br><ul style=\"margin:0.5rem 0 0 1rem;padding:0\"><li><strong>Engagement:</strong> Topline usage patterns across platforms using production data</li><li><strong>PREQ:</strong> Media send and render metrics per media type</li><li><strong>User feedback:</strong> Thematic analysis of customer reviews from the App Store, Google Play, Reddit, etc to surface common pain points</li><li><strong>Lab benchmarking:</strong> Controlled studies comparing experiences across key media types against competitors</li></ul>"
+            },
+            {
+                pattern: /video|prefetch/,
+                response: "I analyzed video prefetching across Facebook and Instagram — the system that loads video segments in the background before a user taps play. I reviewed 50+ historical A/B experiments to understand what had worked and why, which helped me identify 7 key optimization levers. I then designed and ran 10+ A/B tests to reduce buffering and egress bandwidth usage, to provide better user experience."
+            },
+            {
+                pattern: /agent|recipe|automat/,
+                response: "I built 8 analytics agent recipes, with the context of common tables, SQL query patterns, decision logic, response formatting, and validation checks. Before these, investigating a metric regression could take days of ad-hoc querying. With the recipes, the same investigation takes ~30 minutes, and weekly reporting became automated. It also allows XFN partners to easily ask questions about how our metrics are performing."
+            },
+            {
+                pattern: /impact|result|drove|achiev|session|send/,
+                response: "Some concrete impact: my work along with my colleagues on Media Messaging improvements drove +30M daily sends and +5M daily sessions. The analytics agent recipes cut regression investigation from days to ~30 minutes. I also built 5 data pipelines and an automated metric scheduler powering the team's experiment tracking dashboard with regression monitoring."
+            },
+            {
+                pattern: /regress|root.?caus|bug|logging|error/,
+                response: "I root caused 4 major regressions in media reliability experiments and identified 6 common error codes in production data, enabling engineering to ship targeted fixes. I also identified 3 logging bugs that underestimated feature improvement opportunities. Accurate metrics are critical for experiment decisions, so fixing these directly influenced how the team reprioritized the roadmap."
+            },
+            {
+                pattern: /office.?hour|a\/b|ab test|experiment/,
+                response: "I supported 60+ A/B test reviews through office hours, helping teams with metric selection, results interpretation, and launch readiness decisions. I built a dashboard that tracked all launched experiments from our team, with their latest pretest and backtest topline metrics, decision date, and workplace post. The dashboard also tracked all active experiments with regression monitoring."
+            }
+        ],
+        reality_labs: [
+            {
+                pattern: /audio.?personali|quest|hrtf|headset|study|studies|\bvr\b/,
+                response: "Here are some audio studies I worked on:<br><ul style=\"margin:0.5rem 0 0 1rem;padding:0\"><li>Across 5 studies, I led experimental design, data collection, analysis, and documentation for 4 KPI metrics.</li><li>A/B testing audio personalization on the Quest 3 VR headset, which showed that users' own HRTF improves localization accuracy over a generic HRTF, but the effect is small. On the other hand, familiarization had a large effect in improving users' sensitivity to spatial audio.</li><li>Demonstrated that the auditory system makes rapid adjustments in response to changes in the statistics of recent stimulation, suggesting the warping of the audio-spatial map is not constant, but dynamically changes over time as the listener continuously recalibrates to the statistics of their environment.</li><li>Ran 3 end-to-end UXR studies to evaluate users' perception of realism, preference, and co-presence when conversing with avatars in VR with a new voice processing algorithm compared to the currently available product.</li><li>Co-led 10+ end-to-end speech intelligibility studies, to determine psychophysics thresholds, which helped evaluate the Conversation Focus feature on Ray-Ban Meta, announced during Connect 2025.</li></ul>"
+            },
+            {
+                pattern: /ray.?ban|glasses|conversation.?focus|speech|intelligib/,
+                response: "I co-led onsite user studies testing speech intelligibility for Meta Ray-Ban glasses — measuring psychophysics thresholds as well as collecting qualitative ratings. This work contributed directly to Conversation Focus, a feature announced at Connect 2025 that uses spatial audio processing to help amplify the voice of the talker in noisy environments (think of trying to hear someone speaking in a loud pub)."
+            },
+            {
+                pattern: /platform|infrastructure|qualtrics|s3|data.?collect|collect|efficient|cost/,
+                response: "I built a web-based data collection infrastructure combining Prolific for participant recruiting, Qualtrics for experiment delivery, and Amazon S3 for audio stimulus hosting. Before this, perceptual experiments had to be run in-lab one participant at a time. The new platform let us run online studies quickly with checks for audio delivery quality — 30× faster and ~80% cheaper. This was demoed to XFN teams and it became our team's primary collection method."
+            },
+            {
+                pattern: /paper|publication|preprint|publish|biorxiv/,
+                response: "The Reality Labs work led to two 2025 bioRxiv preprints. One shows how prior context shapes spatial audio perception, demonstrating plasticity in the mapping of auditory space. The other is on individual differences in training naive listeners to localize spatial audio in VR. Both are available to download <a href=\"publications.html\" target=\"_blank\" style=\"color:#2e6fa8\">here</a>."
+            }
+        ],
+        nhrc: [
+            {
+                pattern: /eeg|erp|tbi|brain.?injury|biomark|cluster|patient/,
+                response: "I led EEG analysis on 50+ traumatic brain injury (TBI) patients and healthy controls, which included building the preprocessing pipeline, and conducted the ERP analysis for task-based recordings, and k-means clustering on resting state data to identify neural biomarkers of TBI. The goal was to find biomarkers to identify mTBI, which could help inform diagnosis and prognosis. Results were included in annual reports and conference presentations."
+            },
+            {
+                pattern: /\bvr\b|unity|c#|task|sensor|imu|hardware/,
+                response: "I designed and programmed four VR tasks in Unity/C# to evaluate service members' health and performance in complex tasks. Each task integrated multiple hardware: light sensor, sound sensor, and IMU, plus timestamped event streaming to Tobii eye-tracking glasses for multi-device synchronization. Getting all the devices to sync reliably in real time was a significant engineering challenge."
+            }
+        ],
+        academia: [
+            {
+                pattern: /cambridge|\bphd\b|\battention\b|multiple.demand|frontal|parietal|\bmeg\b|\bmrc\b/,
+                response: "My PhD (2015–2019) was at the MRC Cognition and Brain Sciences Unit in Cambridge, supervised by John Duncan and Daniel Mitchell. I studied visual selective attention and the multiple-demand network — frontal and parietal brain regions that activate across diverse demanding cognitive tasks.<br><ul style=\"margin:0.5rem 0 0 1rem;padding:0\"><li><strong>Selective attention:</strong> Used decoding methods on combined MEG/EEG data to quantify the time-course and components of selective attention, including representation of stimulus identity, target position, target identity, behavioral status, and the template of the cue/target (NeuroImage, 2019).</li><li><strong>Hierarchical task representation:</strong> Examined the roles of the MD and DMN networks during performance of task episodes, and identified differential time-courses between networks, as well as characterized regions that coded for the representation of full episodes, individual items, and current position within an episode (Journal of Neuroscience, 2020).</li><li><strong>Task difficulty:</strong> Examined how the MD network responds to task difficulty when it can be offset by increased cognitive resource allocation, compared to when performance is limited by quality of data input (NeuroImage, 2018).</li><li><strong>Default mode network:</strong> Examined the functional convergence and heterogeneity of social, episodic, and self-referential thought in the default mode network (Cerebral Cortex, 2020).</li></ul>"
+            },
+            {
+                pattern: /duke|postdoc|event.?cogni|memory|temporal|boundary/,
+                response: "My postdoc at Duke (2019–2022) with Tobias Egner focused on event cognition and cognitive flexibility:<br><ul style=\"margin:0.5rem 0 0 1rem;padding:0\"><li><strong>Event cognition &amp; memory:</strong> Studied how we segment continuous experience into discrete events, and how event boundaries affect memory. Found that whether boundaries impair or enhance temporal order memory depends on the retrieval context (Cognition, 2022).</li><li><strong>Cognitive flexibility:</strong> People can learn to adjust to be more or less flexible. Showed that learned flexibility generalizes to novel stimuli and task sets (Psychological Science, 2023).</li><li><strong>MD network &amp; task difficulty:</strong> Examined how the multiple-demand network scales responses to task difficulty independently of context (Cerebral Cortex, 2023).</li></ul>"
+            },
+            {
+                pattern: /flexib|switch|task.set|reinforc|strategy|transfer/,
+                response: "Cognitive flexibility — adapting to shifting task demands — was a major research theme. I showed that learned flexibility transfers to novel stimuli and task sets (Psychological Science, 2023), and (with collaborators) that different task rule updating strategies require extensive practice to develop (PsyArXiv, 2025)."
+            }
+        ]
+    };
+
+    const FOLLOW_UP_CHIPS = {
+        meta_foa:      ["Tell me about benchmarking", "Tell me about your video work", "Tell me about your AI-native work", "What was your impact?"],
+        reality_labs:  ["Tell me about the audio studies", "What is Conversation Focus?", "How did you build the data platform?"],
+        nhrc:          ["Tell me about the EEG work", "What VR tasks did you build?"],
+        academia:      ["Cambridge PhD research", "Duke postdoc research", "Cognitive flexibility work"],
+        research:      ["Tell me about the audio studies", "What is Conversation Focus?", "How did you build the data platform?", "Tell me about the EEG work", "What VR tasks did you build?"]
+    };
+
+    let currentContext = null;
+
+    function getResponse(input) {
+        const t = input.toLowerCase().trim();
+
+        if (/^(hi|hello|hey|sup|hiya|howdy)(\s|[!?]|$)/.test(t) || /who are you|introduce yourself|tell me about yourself|what do you do\??$/.test(t)) {
+            currentContext = null; return RESPONSES.intro;
+        }
+        if (/contact|email|hire|reach|work together|connect|linkedin|get in touch/.test(t)) return RESPONSES.contact;
+        if (/dog|pavlov|food|cook|bak|3d|print|hobby|fun|outside work|personal/.test(t)) {
+            currentContext = null; return RESPONSES.misc;
+        }
+
+        if (currentContext && SUB_RESPONSES[currentContext]) {
+            for (const sub of SUB_RESPONSES[currentContext]) {
+                if (sub.pattern.test(t)) return sub.response;
+            }
+        }
+
+        if (/reality labs|\baudio\b|quest\b|mixed reality|spatial audio|ray.?ban|connect 2025|headset/.test(t)) {
+            currentContext = 'reality_labs'; return RESPONSES.reality_labs;
+        }
+        if (/\bmeta\b|data scientist|family of apps|facebook|instagram|messenger|media foundation|prefetch|a\/b\b|ab test/.test(t)) {
+            currentContext = 'meta_foa'; return RESPONSES.meta_foa;
+        }
+        if (/naval|nhrc|military|defense|\btbi\b|brain injury|traumatic/.test(t)) {
+            currentContext = 'nhrc'; return RESPONSES.nhrc;
+        }
+        if (/\bphd\b|cambridge|duke|postdoc|academia|neuroscience|cognitive|fmri|\bmeg\b|\beeg\b|multiple.demand|default mode|event.*cogni|cogni.*flexib|mrc|\beducation\b/.test(t)) {
+            currentContext = 'academia'; return RESPONSES.academia;
+        }
+        if (/paper|publication|publish|journal|preprint|article|scholar/.test(t)) {
+            currentContext = null; return RESPONSES.publications;
+        }
+        if (/python|sql\b|matlab|unity|javascript|coding|program|software|github|pipeline|docker|cluster/.test(t)) {
+            currentContext = null; return RESPONSES.skills_programming;
+        }
+        if (/skill|statistic|quantitative|bayes|causal|forecast|model|machine learn|regression/.test(t)) {
+            currentContext = null; return RESPONSES.skills_quant;
+        }
+        if (/ux\b|user research|user study|usability|survey|interview|eye.?track|psychophys|participant/.test(t)) {
+            currentContext = null; return RESPONSES.ux_research;
+        }
+        if (/\bresearch\b/.test(t)) {
+            currentContext = 'research'; return RESPONSES.rl_research;
+        }
+        if (/who|about|yourself|background|experience/.test(t)) {
+            currentContext = null; return RESPONSES.intro;
+        }
+        return RESPONSES.default;
+    }
+
+    const INITIAL_CHIPS = ["What did you do as a Data Scientist?", "What did you do at Reality Labs?", "What are your skills?", "How can I contact you?"];
+
+    const DEFAULT_CHIPS = ["What did you do as a Data Scientist?", "What did you do at Reality Labs?", "Tell me about your research", "Tell me about your education", "What are your skills?", "What did you do at NHRC?", "What programming languages do you use?", "Tell me about your publications", "What do you like to do outside of work?", "How can I contact you?"];
+
+    function updateChips(initial = false) {
+        const container = document.getElementById('chatSuggestions');
+        if (!container) return;
+        let chips, showReset = false;
+        if (initial) {
+            chips = INITIAL_CHIPS;
+        } else if (currentContext && FOLLOW_UP_CHIPS[currentContext]?.length) {
+            chips = FOLLOW_UP_CHIPS[currentContext];
+            showReset = true;
+        } else {
+            chips = DEFAULT_CHIPS.sort(() => Math.random() - 0.5).slice(0, 4);
+        }
+        let html = chips.map(c => `<button class="chat-chip" onclick="askChip(this)">${c}</button>`).join('');
+        if (showReset) html += `<button class="chat-chip chat-chip-reset" onclick="resetChat()">← More topics</button>`;
+        container.innerHTML = html;
+        container.style.display = '';
+    }
+
+    function resetChat() {
+        currentContext = null;
+        updateChips(true);
+    }
+
+    function appendMessage(text, role) {
+        const msgs = document.getElementById('chatMessages');
+        const div = document.createElement('div');
+        div.className = 'chat-msg ' + role;
+        if (role === 'bot') div.innerHTML = text; else div.textContent = text;
+        msgs.appendChild(div);
+        msgs.scrollTop = msgs.scrollHeight;
+    }
+
+    function handleSend() {
+        const input = document.getElementById('chatInput');
+        const text = input.value.trim();
+        if (!text) return;
+        appendMessage(text, 'user');
+        input.value = '';
+        setTimeout(() => {
+            appendMessage(getResponse(text), 'bot');
+            updateChips();
+        }, 350);
+    }
+
+    function askChip(btn) {
+        document.getElementById('chatInput').value = btn.textContent;
+        handleSend();
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        document.getElementById('chatInput').addEventListener('keydown', function (e) {
+            if (e.key === 'Enter') handleSend();
+        });
+        appendMessage("Hi! I'm a chatbot with info about Tanya's background and experience. Try a suggestion below, or type your own question!", 'bot');
+    });
+    </script>
+</body>
+
+</html>

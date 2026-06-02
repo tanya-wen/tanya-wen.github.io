@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="Tanya Wen — Research and data science project case studies" />
+    <meta name="author" content="Tanya Wen" />
+    <title>Projects · Tanya Wen, Ph.D.</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="../assets/favicon_io/android-chrome-512x512.png" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://kit.fontawesome.com/0c8f9d8867.js" crossorigin="anonymous"></script>
+    <!-- Academicons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="../css/styles.css" rel="stylesheet" />
+</head>
+
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html"><i class="fas fa-home"></i> Tanya Wen, Ph.D.</a>
+            <button class="navbar-toggler font-weight-bold bg-primary text-white rounded" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive"
+                aria-expanded="false" aria-label="Toggle navigation">
+                Menu <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="industry.html">Industry</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded active" href="projects.html">Projects</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="academia.html">Academia</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="publications.html">Publications</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="miscellaneous.html">Misc</a></li>
+                    <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="chat.html">Chat</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="masthead bg-primary text-white text-center">
+        <div class="container">
+            <h1 class="masthead-heading mb-3">Projects</h1>
+            <p class="masthead-subheading font-weight-light">Case studies in user research and data science</p>
+        </div>
+    </header>
+
+    <!-- Jump Nav -->
+    <div class="project-jump-nav">
+        <div class="container">
+            <div class="d-flex flex-wrap justify-content-center gap-2">
+                <a href="#vr-training" class="project-jump-link">VR Audio Training</a>
+                <span class="project-jump-sep">·</span>
+                <a href="#spatial-mapping" class="project-jump-link">Auditory Spatial Mapping</a>
+                <span class="project-jump-sep">·</span>
+                <a href="#conversation-focus" class="project-jump-link">Conversation Focus</a>
+                <span class="project-jump-sep">·</span>
+                <a href="#forecasting" class="project-jump-link">Holiday Forecasting</a>
+                <span class="project-jump-sep">·</span>
+                <a href="#benchmarking" class="project-jump-link">Messaging Benchmarking</a>
+                <span class="project-jump-sep">·</span>
+                <a href="#personalization" class="project-jump-link">Media Personalization</a>
+                <span class="project-jump-sep">·</span>
+                <a href="#experiment-tracker" class="project-jump-link">Experiment Tracker</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== CASE STUDY 1: VR Audio Training ===================== -->
+    <section class="page-section" id="vr-training">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5">
+                    <img src="../assets/img/projects/Quest3_VR.png" alt="Quest 3 VR headset setup" class="img-fluid rounded shadow-sm" style="width:100%; object-fit:cover; max-height:340px;" />
+                </div>
+                <div class="col-lg-7">
+                    <div class="cs-meta mb-3">
+                        <span class="cs-tag cs-tag--research">Published Research</span>
+                        <span class="cs-tag">VR</span>
+                        <span class="cs-tag">Spatial Audio</span>
+                        <span class="cs-tag">Meta Reality Labs</span>
+                    </div>
+                    <h2 class="cs-title">Individual Differences in Learning to Localize Spatial Audio in VR</h2>
+                    <p class="cs-byline">Wen, T., &amp; Ihlefeld, A. (2025). <em>bioRxiv.</em></p>
+
+                    <div class="cs-block">
+                        <h6 class="cs-label">Problem</h6>
+                        <p>Personalizing HRTFs (the acoustic filter that shapes how each individual perceives spatial audio, based on their unique ear/head/torso anatomy) is expensive and hard to scale. A key question for VR audio product development is whether users actually need personalized HRTFs, or whether a well-designed generic HRTF combined with brief training is sufficient.</p>
+                    </div>
+                    <div class="cs-block">
+                        <h6 class="cs-label">Approach</h6>
+                        <p>Our experiments on the Quest 3 headset compared naive listeners vs. those who completed a short training block with visual feedback, tested on both a generic and their own personalized HRTF. Localization accuracy was measured across azimuth, elevation, arc error, and front/back and top/bottom confusions.</p>
+                    </div>
+                    <div class="cs-block">
+                        <h6 class="cs-label">Findings</h6>
+                        <p>Training had a large effect: among naive listeners, 58% were unable to localize spatial audio from all directions; after training, only 12% remained non-sensitive. Training reduced average arc error by ~17°. HRTF personalization had a statistically significant but small effect (~5° reduction in arc error), mainly improving elevation at extreme angles. These findings suggest that a generic HRTF combined with brief training may suffice for most VR applications — with implications for how onboarding should be designed and whether costly personalization pipelines are needed.</p>
+                    </div>
+                    <a href="../uploads/Wen & Ihlefeld 2025 Individual Differences in Training Naive Listeners to Localize Spatial Audio in Virtual Reality.pdf" target="_blank" class="btn btn-outline-primary btn-sm mt-2">
+                        <i class="fas fa-file-pdf me-1"></i> Download Preprint
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CASE STUDY 2: Auditory Spatial Mapping ===================== -->
+    <section class="page-section bg-light" id="spatial-mapping">
+        <div class="container">
+            <div class="row align-items-center g-5 flex-lg-row-reverse">
+                <div class="col-lg-5">
+                    <img src="../assets/img/projects/DynamicAudioMap.png" alt="Auditory spatial mapping figure from paper" class="img-fluid rounded shadow-sm" style="width:100%; object-fit:cover; max-height:340px;" />
+                </div>
+                <div class="col-lg-7">
+                    <div class="cs-meta mb-3">
+                        <span class="cs-tag cs-tag--research">Published Research</span>
+                        <span class="cs-tag">Spatial Audio</span>
+                        <span class="cs-tag">VR</span>
+                        <span class="cs-tag">Meta Reality Labs</span>
+                    </div>
+                    <h2 class="cs-title">Auditory Spatial Mapping: How Prior Context Warps Sound Perception</h2>
+                    <p class="cs-byline">Wen, T., Brimijoin, W. O., &amp; Ihlefeld, A. (2025). <em>bioRxiv.</em></p>
+
+                    <div class="cs-block">
+                        <h6 class="cs-label">Problem</h6>
+                        <p>Audio personalization for VR headsets assumes a stable mapping between acoustic cues and perceived sound locations. But if the auditory spatial map shifts dynamically based on recent listening context, personalization may not be as important in real-world use where the acoustic environment constantly changes.</p>
+                    </div>
+                    <div class="cs-block">
+                        <h6 class="cs-label">Approach</h6>
+                        <p>We presented participants with sounds in blocked spatial contexts on the Quest 3 headset — either across the full range or restricted to the left, right, bottom, or top hemispace — and measured perceived azimuth and elevation without feedback. By comparing localization across contexts, we isolated how the statistics of recent sounds bias spatial perception.</p>
+                    </div>
+                    <div class="cs-block">
+                        <h6 class="cs-label">Findings</h6>
+                        <p>Contextual blocking systematically shifted sound perception: sounds at 0° azimuth were perceived ~3–6° toward the contralateral side. Sounds in the bottom context showed an upward bias in perceived elevation (~4.5°); the top context had no significant effect. These results show that the auditory spatial map is dynamic — continuously recalibrating to the statistics of the current sound environment — with implications for how adaptive audio systems in VR should be evaluated and designed.</p>
+                    </div>
+                    <a href="../uploads/Wen et al 2025 Sound source history warps perceived azimuth and elevation.pdf" target="_blank" class="btn btn-outline-primary btn-sm mt-2">
+                        <i class="fas fa-file-pdf me-1"></i> Download Preprint
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CASE STUDY 3: Conversation Focus ===================== -->
+    <section class="page-section" id="conversation-focus">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5">
+                    <figure class="m-0">
+                        <img src="../assets/img/projects/ConversationFocus.png" alt="Ray-Ban Meta glasses — Conversation Focus feature" class="img-fluid rounded shadow-sm" style="width:100%; object-fit:cover; max-height:340px;" />
+                        <figcaption class="text-muted small mt-1">Photo: Meta</figcaption>
+                    </figure>
+                </div>
+                <div class="col-lg-7">
+                    <div class="cs-meta mb-3">
+                        <span class="cs-tag cs-tag--shipped">Shipped Feature</span>
+                        <span class="cs-tag">UX Research</span>
+                        <span class="cs-tag">Psychophysics</span>
+                        <span class="cs-tag">Wearables</span>
+                        <span class="cs-tag">Meta Reality Labs</span>
+                    </div>
+                    <h2 class="cs-title">Conversation Focus — Ray-Ban Meta Glasses</h2>
+                    <p class="cs-byline">Speech intelligibility research contributing to a shipped product feature.</p>
+
+                    <div class="cs-block">
+                        <h6 class="cs-label">Problem</h6>
+                        <p>We often find that it's hard to hear your conversation partner in noisy environments. To develop Conversation Focus — a feature that amplifies the voice of the person you're talking to — we needed rigorous measurement of how much speech amplification on the glasses is needed and how to make conversation feel natural.</p>
+                    </div>
+                    <div class="cs-block">
+                        <h6 class="cs-label">Approach</h6>
+                        <p>I co-led a series of onsite user studies measuring the thresholds at which participants could reliably understand speech across varying noise levels. Studies were conducted in controlled acoustic environments with real participants.</p>
+                    </div>
+                    <div class="cs-block">
+                        <h6 class="cs-label">Impact</h6>
+                        <p>These studies directly informed the algorithm design and tuning of Conversation Focus. The feature has been shipped to Ray-Ban Meta users.</p>
+                    </div>
+                    <div class="mt-3 d-flex flex-wrap gap-2">
+                        <a href="https://about.fb.com/news/2025/12/updates-to-meta-ai-glasses-conversation-focus-spotify-integration/" target="_blank" class="btn btn-outline-primary btn-sm">
+                            <i class="fas fa-external-link-alt me-1"></i> Meta Newsroom
+                        </a>
+                        <a href="https://techcrunch.com/2025/12/16/metas-ai-glasses-can-now-help-you-hear-conversations-better/" target="_blank" class="btn btn-outline-primary btn-sm">
+                            <i class="fas fa-external-link-alt me-1"></i> TechCrunch
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CASE STUDY 4: Holiday Forecasting ===================== -->
+    <section class="page-section bg-light" id="forecasting">
+        <div class="container">
+            <div class="row align-items-center g-5 flex-lg-row-reverse">
+                <div class="col-lg-5">
+                    <img src="../assets/img/projects/holidays.png" alt="Holiday celebrations" class="img-fluid rounded shadow-sm" style="width:100%; object-fit:cover; max-height:340px;" />
+                </div>
+                <div class="col-lg-7">
+                    <div class="cs-meta mb-3">
+                        <span class="cs-tag cs-tag--ds">Data Science</span>
+                        <span class="cs-tag">Forecasting</span>
+                        <span class="cs-tag">Infrastructure</span>
+                        <span class="cs-tag">Meta Family of Apps</span>
+                    </div>
+                    <h2 class="cs-title">Holiday Traffic Forecasting for Media Infrastructure</h2>
+                    <p class="cs-byline">Meta Family of Apps — Media Foundation team.</p>
+
+                    <div class="cs-block">
+                        <h6 class="cs-label">Problem</h6>
+                        <p>Holidays like Thanksgiving, Christmas, and New Year increase media traffic on Messenger as users share significantly more photos, videos, and audio with family and friends. Without accurate forecasting, engineering teams cannot proactively scale infrastructure, leaving systems exposed to reliability risk at peak load.</p>
+                    </div>
+                    <div class="cs-block">
+                        <h6 class="cs-label">Approach</h6>
+                        <p>I performed forecasting analysis using historical traffic data to project holiday-period media send volumes for different countries and media types.</p>
+                    </div>
+                    <div class="cs-block">
+                        <h6 class="cs-label">Impact</h6>
+                        <p>Results were shared with infrastructure and engineering teams ahead of the holiday period, enabling proactive capacity decisions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CASE STUDY 5: Messaging Benchmarking ===================== -->
+    <section class="page-section" id="benchmarking">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5">
+                    <img src="../assets/img/projects/benchmarking.png" alt="Messaging apps benchmarking" class="img-fluid rounded shadow-sm" style="width:100%; object-fit:cover; max-height:340px;" />
+                </div>
+                <div class="col-lg-7">
+                    <div class="cs-meta mb-3">
+                        <span class="cs-tag cs-tag--ds">Data Science</span>
+                        <span class="cs-tag">UX Research</span>
+                        <span class="cs-tag">Benchmarking</span>
+                        <span class="cs-tag">Meta Family of Apps</span>
+                    </div>
+                    <h2 class="cs-title">Media Messaging Benchmarking</h2>
+                    <p class="cs-byline">Meta Family of Apps — Media Foundation team.</p>
+
+                    <div class="cs-block">
+                        <h6 class="cs-label">Problem</h6>
+                        <p>To prioritize the messaging media roadmap, the team needed a rigorous, multi-dimensional view of how Meta's messaging apps compared to each other and to key external competitors, across media types, devices, network conditions, etc.</p>
+                    </div>
+                    <div class="cs-block">
+                        <h6 class="cs-label">Approach</h6>
+                        <p>I conducted a benchmarking analysis of messaging apps looking at: (1) <strong>Engagement</strong> — topline media sends, active users, etc. using production data; (2) <strong>Performance, reliability, efficiency, and quality</strong> — metrics per media type; (3) <strong>User feedback</strong> — thematic analysis of App Store, Google Play, and Reddit reviews to surface common media-related pain points; and (4) <strong>Lab benchmarking</strong> — controlled studies comparing the performance across different apps.</p>
+                    </div>
+                    <div class="cs-block">
+                        <h6 class="cs-label">Impact</h6>
+                        <p>The benchmarking identified concrete gaps across messaging apps, directly informing the messaging media roadmap. Findings were presented to leadership and cross-functional partners, translating user insights and production signals into prioritized engineering investments.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CASE STUDY 6: Media Personalization ===================== -->
+    <section class="page-section bg-light" id="personalization">
+        <div class="container">
+            <div class="row align-items-center g-5 flex-lg-row-reverse">
+                <div class="col-lg-5">
+                    <img src="../assets/img/projects/MediaUploads.png" alt="Media upload quality vs. size tradeoff" class="img-fluid rounded shadow-sm" style="width:100%; object-fit:cover; max-height:340px;" />
+                </div>
+                <div class="col-lg-7">
+                    <div class="cs-meta mb-3">
+                        <span class="cs-tag cs-tag--ds">Data Science</span>
+                        <span class="cs-tag">Machine Learning</span>
+                        <span class="cs-tag">Experimentation</span>
+                        <span class="cs-tag">Meta Family of Apps</span>
+                    </div>
+                    <h2 class="cs-title">Media Upload Personalization</h2>
+                    <p class="cs-byline">Meta Family of Apps — Media Foundation team.</p>
+
+                    <div class="cs-block">
+                        <h6 class="cs-label">Problem</h6>
+                        <p>Users often have different pain points — some feel that the visual quality of media is too poor and blurry, while others prefer upload speed and reliability over high resolution.</p>
+                    </div>
+                    <div class="cs-block">
+                        <h6 class="cs-label">Approach</h6>
+                        <p>Since upload performance and quality tradeoff (e.g., larger files take longer to upload), this suggests that improving the ML model can provide better user experience. I ran simulations to size the potential impact of the improved model across cohorts and used the results to inform experimentation priorities.</p>
+                    </div>
+                    <div class="cs-block">
+                        <h6 class="cs-label">Impact</h6>
+                        <p>Analysis results were shared with the team; simulations helped size impact and suggest parameters ahead of A/B testing.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CASE STUDY 7: Experiment Tracker ===================== -->
+    <section class="page-section" id="experiment-tracker">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-5">
+                    <div class="cs-img-placeholder">
+                        <i class="fas fa-table"></i>
+                        <span>Experiment tracking dashboard</span>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="cs-meta mb-3">
+                        <span class="cs-tag cs-tag--ds">Data Engineering</span>
+                        <span class="cs-tag">AI-Native</span>
+                        <span class="cs-tag">Analytics Infrastructure</span>
+                        <span class="cs-tag">Meta Family of Apps</span>
+                    </div>
+                    <h2 class="cs-title">Experiment Tracking &amp; Analytics Infrastructure</h2>
+                    <p class="cs-byline">Meta Family of Apps — Media Foundation team.</p>
+
+                    <div class="cs-block">
+                        <h6 class="cs-label">Problem</h6>
+                        <p>The Media Foundation team runs a high volume of A/B tests, but tracking experiment results, monitoring for regressions, and generating reports required significant manual effort.</p>
+                    </div>
+                    <div class="cs-block">
+                        <h6 class="cs-label">Approach</h6>
+                        <p>I built an automatic metric collection scheduler and data pipelines to power the team's experiment tracking dashboard. I also built several analytics agent recipes with core table context, SQL query patterns, decision logic, and validation checks to accelerate investigation workflows.</p>
+                    </div>
+                    <div class="cs-block">
+                        <h6 class="cs-label">Impact</h6>
+                        <p>Launches became easy to track, significantly reduced regression investigation time, and the agent recipes made it easier for the team to self-serve on experiment analysis.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer-->
+    <footer class="footer text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0"></div>
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h4 class="text-uppercase mb-4">Connect with me</h4>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://scholar.google.com/citations?user=pegh2ooAAAAJ&hl=en" target="_blank">
+                        <i style="font-size: 1.25em" class="ai ai-google-scholar"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/tanya-wen-phd/" target="_blank">
+                        <i style="font-size: 1.25em" class="fab fa-linkedin"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/tanya-wen" target="_blank">
+                        <i style="font-size: 1.25em" class="fab fa-github"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="mailto:2tanyawen@gmail.com">
+                        <i style="font-size: 1.25em" class="fas fa-envelope"></i></a>
+                </div>
+                <div class="col-lg-4"></div>
+            </div>
+        </div>
+    </footer>
+    <!-- Copyright Section-->
+    <div class="copyright py-4 text-center text-white">
+        <div class="container"><small>Last updated - June 2026</small></div>
+    </div>
+
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="../js/scripts.js"></script>
+</body>
+
+</html>
