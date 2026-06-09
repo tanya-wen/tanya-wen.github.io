@@ -121,7 +121,7 @@
             </div>
             <div class="row justify-content-center g-4">
                 <!-- Industry Card -->
-                <div class="col-md-3">
+                <div class="col-md-3 animate-fade-up" style="transition-delay:0s">
                     <a href="html/industry.html" class="text-decoration-none">
                         <div class="section-card-inner card h-100 border-0">
                             <div class="card-body text-center p-4">
@@ -136,7 +136,7 @@
                     </a>
                 </div>
                 <!-- Projects Card -->
-                <div class="col-md-3">
+                <div class="col-md-3 animate-fade-up" style="transition-delay:0.1s">
                     <a href="html/projects.html" class="text-decoration-none">
                         <div class="section-card-inner card h-100 border-0">
                             <div class="card-body text-center p-4">
@@ -151,7 +151,7 @@
                     </a>
                 </div>
                 <!-- Academia Card -->
-                <div class="col-md-3">
+                <div class="col-md-3 animate-fade-up" style="transition-delay:0.2s">
                     <a href="html/academia.html" class="text-decoration-none">
                         <div class="section-card-inner card h-100 border-0">
                             <div class="card-body text-center p-4">
@@ -166,7 +166,7 @@
                     </a>
                 </div>
                 <!-- Chat Card -->
-                <div class="col-md-3">
+                <div class="col-md-3 animate-fade-up" style="transition-delay:0.3s">
                     <a href="html/chat.html" class="text-decoration-none">
                         <div class="section-card-inner card h-100 border-0">
                             <div class="card-body text-center p-4">
@@ -280,6 +280,29 @@
                 setTimeout(typeChar, 300);
             });
         });
+    })();
+    </script>
+    <script>
+    (function () {
+        // Mark JS as active so fade-up transitions engage
+        document.body.classList.add('js-ready');
+
+        // Scroll fade-up for .animate-fade-up elements
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+                if (e.isIntersecting) {
+                    e.target.classList.add('is-visible');
+                    io.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.animate-fade-up').forEach(function (el) { io.observe(el); });
+
+        // Navbar glass on scroll
+        var nav = document.getElementById('mainNav');
+        window.addEventListener('scroll', function () {
+            nav.classList.toggle('scrolled', window.scrollY > 60);
+        }, { passive: true });
     })();
     </script>
 </body>

@@ -11961,3 +11961,60 @@ body { background-color: #f4f7fb; }
   font-size: 0.9rem;
   opacity: 0.7;
 }
+/* ══════════════════════════════════════════
+   Homepage Design Enhancements
+   ══════════════════════════════════════════ */
+
+/* 3. Scroll fade-up — only active after JS has run */
+body.js-ready .animate-fade-up {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+body.js-ready .animate-fade-up.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 4. Explore cards: left-to-right accent sweep on hover */
+.section-card-inner {
+  position: relative;
+}
+.section-card-inner::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #2e6fa8, #6aabda);
+  border-radius: 0.85rem 0.85rem 0 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+.section-card-inner:hover::after {
+  transform: scaleX(1);
+}
+
+/* 5. Divider: primary-hued gradient */
+.divider-custom:not(.divider-light) .divider-custom-line {
+  background: linear-gradient(90deg, transparent, rgba(46,111,168,0.5), transparent);
+  height: 3px;
+  max-width: 9rem;
+}
+.divider-custom:not(.divider-light) .divider-custom-icon {
+  color: #2e6fa8;
+  font-size: 1.35rem;
+  opacity: 0.7;
+}
+
+/* 6. Navbar: glass morphism on scroll */
+#mainNav {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease,
+              padding-top 0.3s, padding-bottom 0.3s;
+}
+#mainNav.scrolled {
+  background-color: rgba(45, 49, 66, 0.92) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
